@@ -36,7 +36,7 @@ For example:
 - $r_2$ is the autocorrelation of $y$, between $y_{t}$ and $y_{t-2}$
 - etc
 
-We normaly visualize the autocorrelation function with with an scatter plot, where the x-axis is the lag and the y-axis are the coefficients. See an example below:
+We normaly visualize the autocorrelation function with with an scatter plot, where the x-axis is the lag and the y-axis are the coefficients. The plot is also known as correlogram. See an example below:
 
 ![Autocorrelation](images/Autocorrelation.webp)
 
@@ -45,6 +45,12 @@ We can see that the autocorrelation with lag 0 is equal to 1, which is always tr
 When a time series has no autocorrelation, it's called white noise. The white noise is a purely stochastic (random) process and the ACF plot should not show any significat autocorrelation coefficients, as seen below.
 
 ![White noite](images/Whitenoise.png)
+
+Some intersting properties we can observe in the ACF are the trend and the seasonality. Observe the plot below:
+
+![ACF Trend and Seasonality](images/acftrendandseasonality.png)
+
+The slow decrease in the ACF as the lags increase is due to the tren, while the wavy shape is due the seasonality.
 
 ## Stationary and Differencing
 
