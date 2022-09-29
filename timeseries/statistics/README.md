@@ -28,6 +28,20 @@ In this method, which is a variation of the Naive Method, the forecast can incre
 
 You can see the implementating of those methods in the Jupyter Notebook [simplemethods.ipynb](codes/simplemethods.ipynb).
 
+## Residual Diagnostics
+
+The "residuals" in a time series modela are what is left over after fitting a model. For many (but not all) time series models, the residuals are equal to the difference between the observations and the corresponding fittied values.
+
+Residuals are useful in checking whether a model has adequately captured the information in the data. A good forecasting method yield the following properties:
+
+1. The residuals are uncorrelated. If there are correlations between residuals, then there is information left in the residuals which should be used in computing forecasts.
+2. The residuals have zero mean. If the residuals have a mean other than zero, then the forecasts are biased.
+
+In addition to these essential properties, it is useful (but not necessary) for the residuals to also have the following properties:
+
+3. The residuals have constant variance.
+4. The residuals are normally distributed.
+
 ## Random Walk
 
 A Random Walk model is one where the value at a given time $(y_t)$ is the value at the previous time $(y_{t-1})$ plus a random noise, that is normally distribuited (with mean of 0 and variance of 1). 
