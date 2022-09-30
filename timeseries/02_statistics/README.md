@@ -32,11 +32,35 @@ We can see now that there is no clear trend in the series and we have purely the
 
 In the Jupyter Notebook [randomwalk.ipynb](./codes/randomwalk.ipynb) you can see the steps to simulate a Random Walk, plot its correlogram, differenciate and then see the ACF of the difference.
 
+## Autoregressive Model
+
+The autoregressive model uses a linear combination of past values of the target to make a predicition. The term *autoregression* indicates that it is a regression of the target against itself. The Autoregressive Model of orden *p* can be written as:
+
+$$ y_t = c + \phi_1y_{t-1} + \phi_2y_{t-2} + ... + \phi_py_{t-p} + \varepsilon_t $$
+
+where $\varepsilon_t$ is white noise. We refer to this as an AR(*p*) Model, an Autoregressive Model of order *p*.
+
+The AR(*p*) Model is very flexible and can be used to model differente types of time series patterns, but it can only be applied to a stationary time series.
+
+For example, look at this simulated AR(2) process.
+
+![AR(2) Process](../00_images/ar2process.jpeg)
+
+Take a look at its ACF plot
+
+![AR(2) ACF](../00_images/ar2acf.jpeg)
+
+We can see some oscilation as well as a slow decay. If we look at the PACF (Partial Autocorrelation Process - finds the correlation between the present value and the residuals of the previous lag), we get a plot a like this:
+
+![AR(2) PCAF](../00_images/ar2pacf.jpeg)
+
+We can see that there is no significant peak after lag 2. Therefore, the PACF can be used to determinate the order of the Autoregressive (AR) Model.
+
+You can see an example of the AR Model in the folder codes.
+
 ## Moving Average Model 
 
-Rather than using past values of the forecast variable in a regression, a Moving Average Model uses past errors in a regression-like model
-
-## Autoregressive Model
+Rather than using past values of the forecast variable in a regression, a Moving Average Model uses past errors in a regression-like model.
 
 ## ARMA: Autoregressive Moving Average Model
 
