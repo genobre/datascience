@@ -82,6 +82,24 @@ The code of an simulated AM is in the folder codes.
 
 ## ARMA: Autoregressive Moving Average Model
 
+The Autoregressive Moving Average Model (ARMA) is a combination of an AR(p) and a MA(q) model. In that sense, the ARMA(p,q) expression can also be expressed as a combination of both, resulting in:
+
+$$ y_t = c + \varepsilon_t + \phi_1y_{t-1} + \phi_2y_{t-2} + ... + \phi_py_{t-p} + \theta_1\varepsilon_{t-1} + \theta_2\varepsilon_{t-2} + ... + \theta_q\varepsilon_{t-q} $$
+
+Here, $c$ is a constant, $\varepsilon$ is noise, $\theta$ are the parameters for the MA(q) portion and $\phi$ are the parameters for the AR(p) portion. Just as we did before, q is the order of the Moving Average Model and p is the order of the Autoregressive Model.
+
+By combining both models, we can explain the relationship of the time series with both random noise (due to the Moving Average Model) and itself at a previous step (due to the Autoregressive Model). Look below at an example of a simulated ARMA Process:
+
+![ARMA Process](../00_images/ARMAProcess.png)
+
+And now let's plot its ACF and PACF:
+
+![ARMA ACF and PACF](../00_images/ARMAacfpacf.png)
+
+We can see that both plots a decaying sinusoidal pattern, which is a clear signal that we have both MA and AR processes happening.
+
+You can find the code of the simulated ARMA Process and its ACF and PACF plots in the folder codes.
+
 ## ARIMA: Autoregressive Integrated Moving Average
 
 ## SARIMA
