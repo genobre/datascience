@@ -80,7 +80,7 @@ So, we can use the ACF plot to estimate the order *q* of a Moving Average Model.
 
 The code of an simulated AM is in the folder codes.
 
-## ARMA: Autoregressive Moving Average Model
+### 1.4. ARMA: Autoregressive Moving Average Model
 
 The Autoregressive Moving Average Model (ARMA) is a combination of an AR(p) and a MA(q) model. In that sense, the ARMA(p,q) expression can also be expressed as a combination of both, resulting in:
 
@@ -100,16 +100,44 @@ We can see that both plots a decaying sinusoidal pattern, which is a clear signa
 
 You can find the code of the simulated ARMA Process and its ACF and PACF plots in the folder codes.
 
-## ARIMA: Autoregressive Integrated Moving Average
+## 2. Advanced Models
 
-## SARIMA
+### 2.1. ARIMA: Autoregressive Integrated Moving Average
 
-## AIC: Akaike Information Criterion
+ARIMA stands for Autoregressive Integrated Moving Average Model. It is the combination of an AR(p) Model, a MA(q) Model and differencing (here integration is the opposite of differencing).
 
-## SARIMAX
+The full model can be written as:
 
-## VAR: Vector Autoregressions
+$$ y'_t = c + \varepsilon_t + \phi_1y'_{t-1} + ... + \phi_py'_{t-p} + \theta_1\varepsilon_{t-1} + ... \theta_q\varepsilon_{t-q} $$
 
-## VARMA: Vector Autoregressions Moving Average
+where $y'_t$ is the differenced series (it may have been differenced more than once). Mathematically, the ARIMA(p,d,q) requires three parameters:
 
-## VARMAX: 
+- p = order of the autoregressive part
+- d = degree of first differencing involved
+- q = order of the moving average part
+
+Many of the models we have already discussed are special cases of the ARIMA Model:
+
+| Model                  | ARIMA                         |
+|------------------------|-------------------------------|
+| White noise            | ARIMA(0,0,0)                  |
+| Random walk            | ARIMA(0,1,0) with no constant |
+| Random Walk with drift | ARIMA(0,1,0) with a constant  |
+| Autoregression         | ARIMA(p,0,0)                  |
+| Moving Average         | ARIMA(0,0,q)                  |
+
+It can be hard to determine the values of p, d and q, even if we use the ACF and PACF plots. If the data are from the ARIMA(p,d,0) or ARIMA(0,d,q) model, then the ACF and PACF plots can be helpful, but if both p and q are positive, than the plots do not help in finding suitable values of p and q.
+
+You can find the code where we simulate and forecast the ARIMA Process in the folder codes.
+
+### 2.2. SARIMA
+
+### 2.3. AIC: Akaike Information Criterion
+
+### 2.4. SARIMAX
+
+### 2.5. VAR: Vector Autoregressions
+
+### 2.6. VARMA: Vector Autoregressions Moving Average
+
+### 2.7. VARMAX: 
