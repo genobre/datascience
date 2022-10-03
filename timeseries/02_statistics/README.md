@@ -150,7 +150,19 @@ Similarly, an $ARIMA(0,0,0)(1,0,0)_{12}$ model will show:
 
 You can find the code where we simulate and forecast the SARIMA Process in the folder codes.
 
-### 2.3. AIC: Akaike Information Criterion
+### 2.3. AIC: Akaike's Information Criterion
+
+The Akaike's Information Criterion (AIC) is useful to determining the order of an ARIMA Model. It can be written as
+
+$$ AIC = -2\log(L) + 2(p + q + k + 1) $$
+
+where $L$ is the likelihod of the data, $k=1$ if $c\ne0$ and $k=0$ if $c=0$. We also have The corrected AIC and the Bayesian Information Criterion (BIC), that are derived from the AIC and can also be used to determine the order of the ARIMA Model.
+
+We will select the model with the lowest AIC compared to other models. The AIC cannot be used to select the order of differencing ($d$) becaus it will change the likelihood ($L$). Therefore, we can only compare AIC's that have the same constant $d$.
+
+Notice that the higher the orders for ($p$,$q$) the higher the number of parameters and therefore the higher the AIC for the same likelihood. So, while more parameters might perform better, the AIC is used to find the model with the least amount of parameters while still having good results.
+
+The AIC is simply a criterion to select a model. It can only be used relative to other models and is not a guarantee that the model will have a good performance on unseen data or that the errors will be small.
 
 ### 2.4. SARIMAX
 
