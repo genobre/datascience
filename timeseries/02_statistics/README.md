@@ -2,7 +2,9 @@
 
 In this section we are going to talk about the statistical approach to predict a time series. The codes are available in the folder codes.
 
-## Random Walk
+## 1. Basic Models
+
+### 1.1. Random Walk
 
 A Random Walk model is one where the value at a given time $(y_t)$ is the value at the previous time $(y_{t-1})$ plus a random noise, that is normally distribuited (with mean of 0 and variance of 1). 
 
@@ -32,7 +34,7 @@ We can see now that there is no clear trend in the series and we have purely the
 
 In the Jupyter Notebook [randomwalk.ipynb](./codes/randomwalk.ipynb) you can see the steps to simulate a Random Walk, plot its correlogram, differenciate and then see the ACF of the difference.
 
-## Autoregressive Model
+### 1.2. Autoregressive Model
 
 The autoregressive model uses a linear combination of past values of the target to make a predicition. The term *autoregression* indicates that it is a regression of the target against itself. The Autoregressive Model of orden *p* can be written as:
 
@@ -58,9 +60,25 @@ We can see that there is no significant peak after lag 2. Therefore, the PACF ca
 
 You can see an example of the AR Model in the folder codes.
 
-## Moving Average Model 
+### 1.3. Moving Average Model 
 
-Rather than using past values of the forecast variable in a regression, a Moving Average Model uses past errors in a regression-like model.
+Rather than using past values of the forecast variable in a regression, a Moving Average Model uses past errors in a regression-like model. Then we have:
+
+$$ y_t = c + \varepsilon_t + \theta_1\varepsilon_{t-1} + \theta_2\varepsilon_{t-2} + ... + \theta_q\varepsilon_{t-q} $$
+
+Here, $\varepsilon_t$ is white noise. We refer to this as an MA(q) Model, a Moving Average Model of Order *q*. Because we don't *observe* the values of $\varepsilon_t$ is not really a regression in the usual sense.
+
+We can see below a simulatade Moving Average Process of Order 2:
+
+![MA Process](../00_images/maprocess.jpeg)
+
+If we look at the ACF of this process, we can see that the autocorrelation decreases and is not significant after lag 2.
+
+![MA(2) ACF](../00_images/maacf.jpeg)
+
+So, we can use the ACF plot to estimate the order *q* of a Moving Average Model.
+
+The code of an simulated AM is in the folder codes.
 
 ## ARMA: Autoregressive Moving Average Model
 
