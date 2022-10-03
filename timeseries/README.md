@@ -1,4 +1,4 @@
-# Estudo de Time Series
+# Time Series
 
 This project is a study of the course 'Applied Time Series Analysis in Python' hosted at Udemy and the book [Forecasting: Principles and Practices](https://otexts.com/fpp2/). In here I discuss a little about the statistical and deep learning approaches to a time series prediction, in addition of making an introduction to Prophet.
 
