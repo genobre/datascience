@@ -130,7 +130,25 @@ It can be hard to determine the values of p, d and q, even if we use the ACF and
 
 You can find the code where we simulate and forecast the ARIMA Process in the folder codes.
 
-### 2.2. SARIMA
+### 2.2. SARIMA - Season Autoregressive Integrated Moving Average Model
+
+Now can add another layer of complexity to the model, which bring us to the SARIMA Model. The 'S' indicates that we will now consider the seasonality. The model can be written as follows:
+
+$$ ARIMA(p,d,q)(P,D,Q)_m $$
+
+where $(p,d,q)$ is the non-seasonal part of the model, $(P,D,Q)$ is the seasonal part of the model and m is the number of observations per period.
+
+The seasonal part of an AR or MA model will be seen in the seasonal lags of the PACF and ACF. For example, an $ARIMA(0,0,0)(0,0,1)_{12}$ will show:
+
+- a spike at lag 12 in the ACF but no other significant spikes
+- exponential decay in the seasonal lags of the PACF (12, 24, 36 ...)
+
+Similarly, an $ARIMA(0,0,0)(1,0,0)_{12}$ model will show:
+
+- exponential decay in the seasonal lags of the ACF
+- a single significant spike at lag 12 in the PACF
+
+You can find the code where we simulate and forecast the SARIMA Process in the folder codes.
 
 ### 2.3. AIC: Akaike Information Criterion
 
