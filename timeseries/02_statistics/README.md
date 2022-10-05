@@ -166,8 +166,32 @@ The AIC is simply a criterion to select a model. It can only be used relative to
 
 ### 2.4. SARIMAX
 
-### 2.5. VAR: Vector Autoregressions
+A SARIMAX Model is a Season Autoregressive Integrated Moving Average that considers the effect of an outside variable on the target (the 'X' in SARIMAX denotes that we use exogenous variable to model and predict our target). 
 
-### 2.6. VARMA: Vector Autoregressions Moving Average
+SARIMAX is not a way to model a multivariate time series, meaning it does not predict more than 1 target. This model predicts only 1 target, but with the influence of another feature.
 
-### 2.7. VARMAX: 
+The code for the SARIMAX Model can be found in the folder codes.
+
+### 2.5. General Modeling Procedure
+
+Now that we have seen some different models, we can enumarate a procedure to model time series processes:
+
+1. Plot data and identify unusual observations. Find the pattern in the data.
+2. Apply a transformation or differencing to remove trend and stabilize variance.
+3. Test for stationarity. If not stationary, apply another transformation or differencing.
+4. Plot the ACF and the PACF to maybe estimate the order of MA or AR processes.
+5. Try different combinations of orders and select the model with lowest AIC.
+6. Check the residuals and make sure they look like white noise. Apply the Ljung-Box test.
+7. Calculate forecasts
+
+### 2.6. VAR: Vector Autoregression
+
+Up until now, we have assumed a unidirectional relationship between the target and the feature, meaning that the feature impacts the target, but the target does not impact the feature. This isn't always necessarily the case.
+
+This brings us to the subject of VAR, that means Vector Autoregression. This model is a generalization of the univariate autoregressive AR(p) model for forecasting of time series, in wich each time series is modelled as if they influence each other equally.
+
+To use VAR, all time series in the system must be stationary. The order (p) of the VAR is chosen based on the AIC or any other metric of choice (MSE).
+
+And, just like AR, we also have VARMA and VARMAX. The code for this models is available at the folder codes.
+
+### 2.7. 
