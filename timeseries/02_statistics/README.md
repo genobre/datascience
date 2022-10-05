@@ -193,5 +193,3 @@ This brings us to the subject of VAR, that means Vector Autoregression. This mod
 To use VAR, all time series in the system must be stationary. The order (p) of the VAR is chosen based on the AIC or any other metric of choice (MSE).
 
 And, just like AR, we also have VARMA and VARMAX. The code for this models is available at the folder codes.
-
-### 2.7. 
