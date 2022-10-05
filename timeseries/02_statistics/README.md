@@ -192,4 +192,11 @@ This brings us to the subject of VAR, that means Vector Autoregression. This mod
 
 To use VAR, all time series in the system must be stationary. The order (p) of the VAR is chosen based on the AIC or any other metric of choice (MSE).
 
+A criticism that VAR face is that it is atheoretical; that is, it is not built on some economic theory that imposes a theoretical structure on the equations. Every variable is assumed to influence every other variable in the system, which makes a direct interpretation of the estimated coefficients difficult. Despite this, VARs are useful in many contexts:
+
+1. forecasting a collection of related variables where no explicit interpretation is required;
+2. testing whether one variable is useful in forecasting another (the basis of Granger causality tests);
+3. impulse response analysis, where the response of one variable to a sudden but temporary change in another variable is analysed;
+4. forecast error variance decomposition, where the proportion of the forecast variance of each variable is attributed to the effects of the other variables.
+
 And, just like AR, we also have VARMA and VARMAX. The code for this models is available at the folder codes.
