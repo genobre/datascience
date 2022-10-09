@@ -77,3 +77,5 @@ Applying the filter map reduces the feature matrix. If we applied the filter aga
 Finally, CNN can also have a pooling layer, which is another way of reducing the feature space.
 
 But how does this relate to time series? We can consider that the result of a convolution on a Time Series is another Time Series that was filtered. That way, we can think of a CNN as a way to remove noise and abnormal segments in a time series, leaving us with only the most important information that will help us in making a forecast.
+
+In the folder codes, the file DeepLearning contains a Jupyter Notebook where I try different applications of Deep Learning in a Appliance Energy Dataset. Feel free to take a look at it and try to understand the different approaches in forecasting time series with deep learning, though I didn't dover the deep learning basics in this section.
