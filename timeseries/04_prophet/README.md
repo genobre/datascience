@@ -67,4 +67,4 @@ Usually, we tune the following parameters:
 - `holidays_prior_scale`: try values between 0.01 and 10
 - `seasonality_mode`: try *additive* or *multiplicative*
 
-The code that show all these functionalisties is the Prophet.ipynb, located in the folder codes.
+The code that show all these functionalisties is the Prophet.ipynb, located in the folder codes. You can also check out the code ProphetProject to see a forecast project using Prophet.
