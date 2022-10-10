@@ -7,3 +7,4 @@ We have the following projects so far:
 - A study of time series
   - Statistical Approach
   - Deep Learning Approach
+  - Using Prophet
