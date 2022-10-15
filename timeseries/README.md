@@ -14,3 +14,5 @@ You will find the following sections:
    - We will talk about the deep learning approach
 4. Prophet
    - We will talk a little about Prophet
+5. Projects
+   - Three projects working with the same dataset: one with SARIMA, one with a LSTM model and one with Prophet
