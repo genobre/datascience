@@ -1,10 +1,18 @@
-# Data Science Projects
+# Time Series
 
-A portfolio of data science projects by Geovanna Santos Nobre de Oliveira
+This project is a study of the course 'Applied Time Series Analysis in Python' hosted at Udemy and the book [Forecasting: Principles and Practices](https://otexts.com/fpp2/). In here I discuss a little about the statistical and deep learning approaches to a time series prediction, in addition of making an introduction to Prophet.
 
-We have the following projects so far:
+Some of the codes available here are based on the code tutorial in the course, with some minor additions, and other are autoral. 
 
-- A study of time series
-  - Statistical Approach
-  - Deep Learning Approach
-  - Using Prophet
+You will find the following sections:
+
+1. Basics
+   - We will talk about the basic of forecasting
+2. Statistics
+   - We will talk about the statistical approach
+3. Deep Learning
+   - We will talk about the deep learning approach
+4. Prophet
+   - We will talk a little about Prophet
+5. Projects
+   - Three projects working with the same dataset: one with SARIMA, one with a LSTM model and one with Prophet
